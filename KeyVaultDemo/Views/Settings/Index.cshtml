@@ -1,0 +1,18 @@
+﻿
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Save","Settings"))
+{
+	<input type="text" name="People[0].FirstName" />
+	<input type="text" name="People[0].LastName" />
+
+	<input type="text" name="People[1].FirstName" />
+	<input type="text" name="People[1].LastName" />
+
+	<input type="submit" value="Post" />
+}
