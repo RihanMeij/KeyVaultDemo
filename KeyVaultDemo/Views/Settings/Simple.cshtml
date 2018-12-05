@@ -1,0 +1,23 @@
+﻿@model Microsoft.Extensions.Configuration.IConfiguration
+@{
+	ViewData["Title"] = "Simple";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Simple</h2>
+
+
+<h3>List the current values</h3>
+<ul>
+	@foreach (var setting in Model.GetChildren())
+	{
+		<li>
+			<span>@setting.Key</span>
+			<span>@setting.Value</span>
+		</li>
+	}
+
+</ul>
+
+<h3>But it would probably be used more like this</h3>
+<span>@Model["ConnectionString"]</span>

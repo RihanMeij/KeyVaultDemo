@@ -1,0 +1,28 @@
+﻿@model Microsoft.Extensions.Options.IOptions<KeyVaultDemo.Settings.KeyVaultOptions>
+@{
+	ViewData["Title"] = "Complex";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Complex</h2>
+
+<table class="table">
+	<thead>
+	<tr>
+		<th scope="col">Key</th>
+		<th scope="col">Secret</th>
+		<th scope="col">Authentication Url</th>
+	</tr>
+	</thead>
+	<tbody>
+	@foreach (var provider in Model.Value.AuthenticationProviders)
+	{
+		<tr>
+			<th scope="row">@provider.Key</th>
+			<td>@provider.Secret</td>
+			<td><a href="@provider.AuthenticationUrl">@provider.Key</a>
+			</td>
+		</tr>
+	}
+	</tbody>
+</table>
