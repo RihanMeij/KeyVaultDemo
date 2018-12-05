@@ -288,3 +288,7 @@ __pycache__/
 *.xsd.cs
 .vscode/
 *.DotSettings
+/KeyVaultDemo/wwwroot/lib/jquery-validation-unobtrusive
+/KeyVaultDemo/wwwroot/lib/jquery-validation
+/KeyVaultDemo/wwwroot/lib/jquery
+/KeyVaultDemo/wwwroot/lib/bootstrap
